@@ -1,5 +1,4 @@
 #provider block
-
 provider "aws" {
   access_key = "${var.myaccess_key}"
   secret_key = "${var.mysecret_key}"
@@ -7,7 +6,6 @@ provider "aws" {
 }
 
 # Resource bloc( Here i create s3 bucket)
-
 resource "aws_s3_bucket" "s3tf_bucket" {
     bucket = "s3-tf-bucket-july-15-2022"
     acl = "private"
@@ -22,7 +20,6 @@ resource "aws_s3_bucket" "s3tf_bucket" {
 }
 
 # Uploading a single file into s3 bucket
-
 resource "aws_s3_bucket_object" "tf_object" {
     bucket = "s3-tf-bucket-july-15-2022"
     key = "tfs3obj.txt"
